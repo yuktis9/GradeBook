@@ -18,7 +18,7 @@ public class GradeBook {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int sAge;
+        int sAge, dayStill = 0, retirement = 70;
         Double sGpa;
         String sName, gender = "";
         Boolean isFemale;
@@ -55,9 +55,11 @@ public class GradeBook {
             System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge, gender,sGpa);
         }
         
+        dayStill = retirement - sAge;
+        
         //MARK: - To be on Dean's list student must qualify this check       
 //        if (sAge >= 70){
-//            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge,gender, sGpa);
+            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! and %d days left for retirement\n", sName, sAge,gender, sGpa, dayStill);
 //        }else{
 //            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge,gender, sGpa);
 //        }
