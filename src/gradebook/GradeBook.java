@@ -18,24 +18,49 @@ public class GradeBook {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int sAge;
+        Double sGpa;
+        String sName, gender = "";
+        Boolean isFemale;
         
         Scanner input = new Scanner(System.in);
         
         System.out.println("Please Enter the student's name ==>" );
-        String sName = input.nextLine();
+        sName = input.nextLine();
 //        System.out.println(sName);
         
         System.out.println("Please Enter the student's age ==>");
-        int sAge = input.nextInt();
+         sAge = input.nextInt();
 //        System.out.println(sAge);
         
         System.out.println("Please Enter the student's GPA ==>");
-        Double sGpa = input.nextDouble();
-//        System.out.println(sGender);
-//        if (sName.equals("") || sAge != null || null != sGpa ){
-            System.out.println("Welcome!!" +sName);
+        sGpa = input.nextDouble();
+
+        System.out.println("Are you Female (True/False) ==>");
+        isFemale = input.nextBoolean();
+        
+        //MARK: - To be on Dean's list student must qualify this check       
+        if (sGpa > 3.2){
+            System.out.printf("Congrats! %s you are on Dean's List \n", sName);
+        }else{
+            System.out.printf("Sorry! %s you are not on Dean's List \n", sName);
+        }
+        
+        gender = isFemale ? "She" : "He";
+        
+        //MARK: - To be on Dean's list student must qualify this check       
+        if (isFemale != true){
+            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge,gender, sGpa);
+        }else{
+            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge, gender,sGpa);
+        }
+        
+        //MARK: - To be on Dean's list student must qualify this check       
+//        if (sAge >= 70){
+//            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge,gender, sGpa);
+//        }else{
+//            System.out.printf("%s is %d years old. %s has a %f GPA Welcome!! \n", sName, sAge,gender, sGpa);
 //        }
-//        if sGender == 'Female'
     }
     
 }
